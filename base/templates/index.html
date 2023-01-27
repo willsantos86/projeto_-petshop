@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% load static %}
+{% block conteudo %}
+
+<main class="px-3">
+  <h1 class="fst-italic">Reserve já o banho do seu Pet!</h1>
+  <p class="lead fst-italic">Demonstre seu amor para quem te ama!</p>
+  <p class="lead fst-italic">
+    <a href="{% url 'reserva:criar_reserva' %}" class="btn btn-lg btn-secondary fw-bold border-white bg-white">Fazer Reserva</a>
+  </p>
+</main>
+{% endblock %}
+     
+      
