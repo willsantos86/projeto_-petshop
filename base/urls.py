@@ -4,6 +4,6 @@ from base.views import *
 app_name = 'base'
 
 urlpatterns = [
-    path('', index, name='index'),
+    path('index/', index, name='index'),
     path('contato/', contato, name='contato'),
 ]

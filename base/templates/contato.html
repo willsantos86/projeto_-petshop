@@ -4,16 +4,21 @@
 
 {% block conteudo %}
 <main class="px-3">
-  <h2 class="mt-lg-5 mb-6 fst-italic" style="text-align: center">Fale Conosco</h2>
-  <p class="fst-italic">
-    Envie uma mensagem através do Formulário abaixo ou ligue para o telefone {{ telefone }}
-    e fale com o responsável {{ responsavel|upper }}.
-  </p>
+  <div class="p-2 p-md-1 mb-4 text-white rounded bg-dark container">
+    <div class="col-md-11px-0">
+      <h4 class="display-11 fst-italic text-center">Fale conosco</h4>
+      <p class="fst-italic text-center">
+        Envie uma mensagem através do Formulário abaixo ou ligue para o telefone {{ telefone }}
+        e fale com o responsável {{ responsavel|upper }}.
+      </p>
+    </div>
+  </div>
+  
       {% if sucesso %}
       <p class="alert alert-success fst-italic">Mensagem enviada com sucesso!</p>
       {% else %}
      <br>
-     <form action="" method="post" novalidate class=" m-auto fst-italic">
+     <form action="" method="post" novalidate class=" m-auto fst-italic container">
       {% csrf_token %}
       {% bootstrap_form form %}
       <button class="btn btn-primary my-5 fst-italic" type="submit">Enviar Mensagem</button>

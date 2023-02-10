@@ -7,7 +7,12 @@
         <p class="alert alert-success fst-italic">Reserva realizada com sucesso, em breve iremos entrar em contato!</p>
         {% else %}
         <br>
-        <form action="" method="post" novalidate class="col-11 m-auto mt-md-5 fst-italic">
+        <form action="" method="post" novalidate class="col-11 m-auto mt-md-1 fst-italic">
+          <div class="p-2 p-md-1 mb-4 text-white rounded bg-dark">
+            <div class="col-md-10 px-0">
+              <h4 class="display-10 fst-italic text-center">Crie sua reserva no formulário abaixo</h4>
+            </div>
+          </div>
           {% csrf_token %}
           {% bootstrap_form form %}
             <button class="btn btn-primary my-5 fst-italic" type="submit">Agendar</button>
