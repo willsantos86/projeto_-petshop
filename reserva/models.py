@@ -18,7 +18,10 @@ class Reserva(models.Model):
     tamanho = models.IntegerField(verbose_name='Tamanho', choices=TAMANHO_OPCOES)
     observacoes = models.TextField(blank=True)
 
-    def __str__(self):
+    def quantidade_reserva(self):
+        return self.reservas.count()
+
+    def str(self):
         return f'{self.nome}: {self.data} - {self.turno}'
 
     class Meta:

@@ -5,7 +5,7 @@ from base.views import *
 
 
 urlpatterns = [
-    path('base/', include('base.urls', namespace='base')),
+    path('', include('base.urls', namespace='base')),
     path('reserva/', include('reserva.urls', namespace='reserva')),
     path('admin/', admin.site.urls),
     path('api-auth/', include('rest_framework.urls')),

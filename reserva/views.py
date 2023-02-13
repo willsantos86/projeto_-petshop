@@ -3,11 +3,11 @@ from reserva.forms import ReservaForm
 
 # Create your views here.
 def criar_reserva(request):
-    sucesso = False
     form = ReservaForm(request.POST or None)
+    sucesso = False
     if form.is_valid():
-        sucesso = True
         form.save()
+        sucesso = True
     contexto = {
         'form': form,
         'sucesso': sucesso
